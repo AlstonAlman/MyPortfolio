@@ -1,0 +1,170 @@
+body{
+    margin: 0;
+    padding: 10px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    padding-right: 10em;
+}
+h1{
+    font-family:'Courier New', Courier, monospace;
+    padding: 300px;
+    padding: 50px;
+    margin-top: 250px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.subtitle{
+    font-size: 1.5rem;
+    font-weight: 100;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.ScrollTracker{
+    position: fixed;
+    inset: 0 0 auto;
+    height: 0.5rem;
+    background-color: rgb(0, 72, 255);
+    transform-origin: left;
+}
+
+.aboutme-body{
+    margin-top: 300px;
+    margin-left: 100px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(60, 60, 60);
+}
+
+.aboutme-p{
+    font-size: 20px;
+}
+
+.aboutme-p2{
+    font-size: 20px;
+}
+
+.projects{
+    margin-top: 300px;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+}
+.card-one{
+    font-family: sans-serif;
+    background-image:url(note.jpg);
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 35ch;
+    margin-top: 30px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    transition: transform 500ms ease;
+}
+
+.card-one:hover,
+.card-one:focus-within{
+    transform: scale(1.05);
+}
+
+.card-content{
+    padding: 1.5rem;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / .3) 20%,
+        hsl(0 0% 0% / 1)
+    );
+}
+
+.Card-head-One::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: 0;
+    margin-top: 27px;
+    width: 150px;
+    background-color: rgb(12, 247, 79);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.card-one:hover .Card-head-One::after,
+.card-one:focus-within .Card-head-One::after{
+    transform: scaleX(1);
+}
+
+
+.card-body-one{
+    color: rgb(255, 255, 255 / 0.85);
+}
+
+@media (hover) {
+    .card-content{     
+    transform: translateY(60%);
+    transition: transform 500ms ease;
+    }
+    
+
+.card-one:hover .card-content,
+.card-one:focus-within .card-content{
+    transform: translateY(0);
+    transition-delay: 500ms;
+}
+
+.card-one:focus-within .card-content{
+    transition-duration: 0ms;
+}
+
+.card-content > *:not(.Card-head-One) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+
+.card-one:hover .card-content > *:not(.Card-head-One),
+.card-one:focus-within .card-content > *:not(.Card-head-One) {
+    opacity: 1;
+    transition-delay: 1000ms;
+}
+
+.card-one:focus-within .card-content > *:not(.Card-head-One) {
+    transition-delay: 500ms;
+}
+
+.Card-head-One::after{
+    transform: scaleX(0);
+}
+}
+
+.button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: hsl(207, 19%, 9%);
+    background-color:rgb(24, 247, 12) ;
+    padding: 0.5em 1.25em;
+    border-radius: 0.25em;
+}
+
+.button:hover,
+.button:focus{
+    background-color: aliceblue;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms
+        !important;
+        animation-iteration-count: 1
+        !important;
+        animation-duration: 0.01ms
+        !important;
+        scroll-behavior: auto
+        !important;
+        transition-delay: 0ms !important;
+    }
+}
