@@ -15,6 +15,27 @@ h1{
     text-align: center;
 }
 
+h1{
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 191, 0), rgb(128, 255, 0), rgb(0, 255, 64), rgb(0, 255, 255), rgb(0, 64, 255), rgb(128, 0, 255), rgb(255, 0, 191), rgb(255, 0, 0));
+  
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 12s ease infinite;
+  }
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  
 .subtitle{
     font-size: 1.5rem;
     font-weight: 100;
@@ -23,8 +44,29 @@ h1{
     text-align: center;
 }
 
+.subtitle{
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 191, 0), rgb(128, 255, 0), rgb(0, 255, 64), rgb(0, 255, 255), rgb(0, 64, 255), rgb(128, 0, 255), rgb(255, 0, 191), rgb(255, 0, 0));
+  
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 12s ease infinite;
+  }
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
 .github{
-    margin-left: 40%;
+    margin-left: 50%;
     font-size: 20px;
     background-color: rgb(0, 153, 255);
     color: rgb(255, 255, 255);
@@ -41,26 +83,83 @@ h1{
     height: 0.5rem;
     background-color: rgb(0, 72, 255);
     transform-origin: left;
+    
 }
 
-.aboutme-body{
-    margin-top: 300px;
-    margin-left: 100px;
-    text-align: center;
-    color: rgb(255, 255, 255);
+
+.nav-bar{
+    position: fixed;
+    inset: 0 0 auto;
+    height: 50px;
+    width: auto;
+    background-color:hsl(250, 90%, 40%);
+}
+.contact{
+    margin: 50px;
+    margin-top: 10px;
+    padding: 0.5% 1%;
+    color: aliceblue;
+    background-color:hsl(250, 90%, 40%);
+    border: 0;
+    font-size: 20px;
+}
+.contact:hover{
+    cursor: pointer;
+    background-color:hsl(210, 90%, 40%);
+    border: 1px;
+    border-radius: 1em;
+}
+.a{
+    margin: 50px;
+    margin-top: 10px;
+    padding: 0.5% 1%;
+    color: aliceblue;
+    background-color:hsl(250, 90%, 40%);
+    border: 0;
+    font-size: 20px;
+}
+.a:hover{
+    cursor: pointer;
+    background-color:hsl(210, 90%, 40%);
+    border: 1px;
+    border-radius: 1em;
+}
+.b{
+    margin: 50px;
+    margin-top: 10px;
+    padding: 0.5% 1%;
+    color: aliceblue;
+    background-color:hsl(250, 90%, 40%);
+    border: 0;
+    font-size: 20px;
+}.b:hover{
+    cursor: pointer;
+    background-color:hsl(210, 90%, 40%);
+    border: 1px;
+    border-radius: 1em;
+}
+
+
+.aboutme{
+    margin-top: 450px;
+    margin-left: 30px;
     background-color: rgb(60, 60, 60);
+    box-shadow: 0 0 0 15vmax rgb(60, 60, 60);
+    text-align: center;
+    align-content: center;
+    color: rgb(255, 255, 255);
 }
 
 .aboutme-p{
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .aboutme-p2{
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .projects{
-    margin-top: 300px;
+    margin-top: 471px;
     margin-left: auto;
     color: rgb(255, 255, 255);
 }
@@ -102,7 +201,6 @@ h1{
     transform-origin: left;
     transition: transform 500ms ease;
 }
-
 .card-one:hover .Card-head-One::after,
 .card-one:focus-within .Card-head-One::after{
     transform: scaleX(1);
